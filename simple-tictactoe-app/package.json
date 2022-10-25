@@ -2,7 +2,7 @@
   "name": "simple-tictactoe-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://coderof19clc7.github.io/WebAdvanceCoursesAssignment/",
+  "homepage": "https://coderof19clc7.github.io/WebAdvanceW02_TicTacToe/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
