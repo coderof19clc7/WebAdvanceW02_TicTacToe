@@ -224,22 +224,6 @@ class Game extends React.Component {
 
   render() {
     const size = this.state.size;
-
-    if (size**2 !== this.state.history[0].squares.length) {
-      this.setState({
-        history: [
-          {
-            squares: Array(size**2).fill(null),
-            row: null,
-            col: null
-          }
-        ],
-        stepNumber: 0,
-        xIsNext: true,
-        result: null,
-      })
-    }
-
     const history = this.state.history;
     const current = history[this.state.stepNumber];
 
@@ -280,6 +264,16 @@ class Game extends React.Component {
           />
           <button className="toggle-size-btn" onClick={() => this.setState({
             size: nextSize,
+            history: [
+              {
+                squares: Array(nextSize**2).fill(null),
+                row: null,
+                col: null
+              }
+            ],
+            stepNumber: 0,
+            xIsNext: true,
+            result: null,
           })}>
             {`${nextSize}x${nextSize} (${nextSize===3 ? 3 : 5} to win)`}
           </button>
